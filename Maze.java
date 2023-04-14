@@ -71,7 +71,7 @@ class Maze {
         gy = (((randomy.nextInt(rows - 2)) / 2) * 2) + 1;
 
         map = new char[cols][rows]; // sets map array
-        visited = new boolean[cols + 2][rows + 2]; // sets array to store visited
+        visited = new boolean[cols + 2][rows + 2]; // sets array to store points visited during generation (+2 to stop out of bounds error when checking edges, adds border around map)
 
         // grid setup
         for (int x = 1; x < cols - 1; x++) { // fills in blank space
