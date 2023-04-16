@@ -169,28 +169,28 @@ class Maze {
         }
     }
 
-    public void render() {
-        System.out.println(
-                "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUse the W,A,S,D keys to move your character (0) to reach the target (X)\n\n");
-        for (int i = 0; i < (cols / 2) - 9; i++) {
-            System.out.print("~");
+    public void render(){
+        String display = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUse the W,A,S,D keys to move your character (0) to reach the target (X)\n\n";
+        for(int i = 0; i < (cols / 2) - 9; i++){
+          display += "~";
         }
-        System.out.print("Welcome To the Maze!");
-        for (int i = 0; i < (cols / 2) - 10; i++) {
-            System.out.print("~");
+        display += "Welcome To the Maze!";
+        for(int i = 0; i < (cols / 2) - 10; i++){
+          display += "~";
         }
-        System.out.println();
-        System.out.print("\nMove: " + moves);
-        for (int i = 0; i < cols - 21; i++) {
-            System.out.print(" ");
+        display += "\n";
+        display += "\nMove: " + moves;
+        for(int i = 0; i < cols - 21; i++){
+          display += " ";
         }
-        System.out.println("Highscore: " + highscore + "\n\n");
-        for (int y = 0; y < rows; y++) {
-            for (int x = 0; x < cols; x++) {
-                System.out.print(map[x][y]);
-            }
-            System.out.println();
+        display += "Highscore: " + highscore + "\n\n";
+        for(int y = 0; y < rows; y++){
+          for(int x =0; x < cols; x++){
+            display += map[x][y];
+          }
+          display += "\n";
         }
+        System.out.println(display);
     }
 
     public void input() {
